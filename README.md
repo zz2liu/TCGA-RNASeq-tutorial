@@ -27,11 +27,7 @@ rm tmp.index; rm *.tmp
 - [Description of the Barcode](https://wiki.nci.nih.gov/display/TCGA/TCGA+barcode)
 - [Description of the pipeline](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/)
 - Download [the GENCODE gene annotation file](gencode_v22_geneInfo.csv)
-- Map the FPKM matrix to gene symbol and barcode in R
-
-```
-write.csv
-```
+- Map the FPKM matrix to gene symbol and barcode with [preprocess_count_matrix.R](preprocess_count_matrix.R).
 
 ## Introduction of analyses in R
 - Filter the genes and convert FPKM to log scale
