@@ -1,5 +1,5 @@
-#args = commandArgs(trailingOnly=T)
-tmp = read.csv('metadata.cart.csv', check.names=F)
+#setwd=('../Downloads')
+tmp = read.csv('convertcsv.csv', check.names=F)
 metaFeatures = c(
     file_id='file_id',
     barcode='associated_entities/0/entity_submitter_id',

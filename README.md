@@ -25,7 +25,8 @@ paste tmp.index *.tmp > ../geneId_fileId_RPKM.txt
 rm tmp.index; rm *.tmp
 ```
 - [Description of the Barcode](https://wiki.nci.nih.gov/display/TCGA/TCGA+barcode)
-- Download [the GENCODE gene annotation file](gencode_v24_geneInfo.csv)
+- [Description of the pipeline](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/)
+- Download [the GENCODE gene annotation file](gencode_v22_geneInfo.csv)
 - Map the FPKM matrix to gene symbol and barcode in R
 
 ```
