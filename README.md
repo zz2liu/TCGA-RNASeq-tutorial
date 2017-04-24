@@ -21,7 +21,7 @@ for f in */*.gz; do
 done
 echo 'featureId' > tmp.index
 zcat $f | cut -f1 >> tmp.index
-paste tmp.index *.tmp > ../geneId_fileId_RPKM.txt
+paste tmp.index *.tmp > ../geneId_fileId_FPKM.txt
 rm tmp.index; rm *.tmp
 ```
 - [Description of the Barcode](https://wiki.nci.nih.gov/display/TCGA/TCGA+barcode)
@@ -31,17 +31,12 @@ rm tmp.index; rm *.tmp
 
 ## Introduction of analyses in R
 - Filter the genes and convert FPKM to log scale
-```
-```
-
-- sample distance
-- PCA
 - Id genes coexpressed with your gene of interest
 - Id genes differently expressed between paired normal and tumor
-- survival analysis of a gene hi/low with survival, multivariate
+- PCA plot
 
 ## Introduction of the analyses by FireHose
 - Gene
 - Cohort summary
-- Cohort data
+- Cohort data and workflow
 - Cohort analysis
