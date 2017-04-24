@@ -30,6 +30,7 @@ rm tmp.index; rm *.tmp
 - Map the FPKM matrix to gene symbol and barcode with [preprocess_count_matrix.R](preprocess_count_matrix.R).
 
 ## Introduction of analyses in R
+[Using the script](introduction_to_analyses.R) to:
 - Filter the genes and convert FPKM to log scale
 - Id genes coexpressed with your gene of interest
 - Id genes differently expressed between paired normal and tumor
