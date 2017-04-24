@@ -4,15 +4,16 @@ The tutorial for a yale training session: TCGA RNA-seq Data, Download and Analys
 ## Go to [TCGA data hub](https://portal.gdc.cancer.gov/)
 - Navigate and select files to basket
 - Download metadata and manifest from basket
-- Download the files with [GDC-client]()
+- Download the files with [GDC-client](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool)
 
 ## Preprocess the metadata
-- Convert to csv use the online tool()
-- [Description here](http://docs.cancergenomicscloud.org/docs/tcga-metadata)
+- Convert to csv use the [online tool json-to-csv](http://www.convertcsv.com/json-to-csv.htm)
+- [Metadata Description here](http://docs.cancergenomicscloud.org/docs/tcga-metadata)
 - Choose and rename fields in a speadsheet or a [R script](preprocess_metadata.R)
 
 ## Preprocess the FPKM matrix
 - Convert the downloaded files to a FPKM matrix in unix shell/terminal
+
 ```
 for f in */*.gz; do
   id=$(dirname $f); echo $id > $id.tmp; 
@@ -22,7 +23,6 @@ echo 'featureId' > tmp.index
 zcat $f | cut -f1 >> tmp.index
 paste tmp.index *.tmp > ../geneId_fileId_RPKM.txt
 rm tmp.index; rm *.tmp
-
 ```
 - [Description of the Barcode](https://wiki.nci.nih.gov/display/TCGA/TCGA+barcode)
 - Download [the GENCODE gene annotation file](gencode_v24_geneInfo.csv)
