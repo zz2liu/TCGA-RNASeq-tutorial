@@ -46,3 +46,17 @@ rm tmp.index; rm *.tmp
 - Cohort summary
 - Cohort data and workflow
 - Cohort analysis
+
+## FAQS
+### Preprocess the FPM matrix
+- Convert the downloaded files to a FPKM matrix in *unix shell/terminal*
+```bash
+for f in */*.txt; do
+  id=$(dirname $f); echo $id > $id.tmp; #colnames to-be
+  cat $f | cut -f3 >> $id.tmp;  #cell values to-be
+done
+echo 'featureId' > tmp.index
+cat $f | cut -f1 >> tmp.index #the rownames to be
+paste tmp.index *.tmp > ../featureId_fileId_FPKM.txt
+rm tmp.index; rm *.tmp
+```
