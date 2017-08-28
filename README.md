@@ -51,6 +51,7 @@ rm tmp.index; rm *.tmp
 ### quick fix to get the miRNA FPM matrix for Queen Okoro
 - Convert the downloaded files to a FPKM matrix in *unix shell/terminal*
 ```bash
+# cd to the folder with all the txt files under each sample directory.
 for f in */*.txt; do
   id=$(dirname $f); echo $id > $id.tmp; #colnames to-be
   cat $f | cut -f3 >> $id.tmp;  #cell values to-be
