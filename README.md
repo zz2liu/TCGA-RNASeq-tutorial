@@ -48,7 +48,7 @@ rm tmp.index; rm *.tmp
 - Cohort analysis
 
 ## FAQS
-### Preprocess the FPM matrix
+### quick fix to get the miRNA FPM matrix for Queen Okoro
 - Convert the downloaded files to a FPKM matrix in *unix shell/terminal*
 ```bash
 for f in */*.txt; do
